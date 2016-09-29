@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="#8ef7d0">
+    android:background="#b9f6f7">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"

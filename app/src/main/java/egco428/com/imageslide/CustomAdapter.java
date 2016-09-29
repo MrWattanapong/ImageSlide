@@ -15,6 +15,7 @@ public class CustomAdapter extends PagerAdapter{
 
     Context context;
     int[] imageId = {R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4, R.drawable.image5};
+    String[] text = {"I have a pen","I have an apple","Arhh","Apple pen","Bye Bye"};
 
     public CustomAdapter(Context context){
         this.context = context;
@@ -31,8 +32,8 @@ public class CustomAdapter extends PagerAdapter{
         View viewItem = inflater.inflate(R.layout.image_item, container, false);
         ImageView imageView = (ImageView) viewItem.findViewById(R.id.imageView);
         imageView.setImageResource(imageId[position]);
-        //TextView textView1 = (TextView) viewItem.findViewById(R.id.textView1);
-        //textView1.setText("hi");
+        TextView textView = (TextView) viewItem.findViewById(R.id.textView);
+        textView.setText(text[position]);
         ((ViewPager)container).addView(viewItem);
 
         return viewItem;
